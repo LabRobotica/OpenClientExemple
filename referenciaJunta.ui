@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReferenciaJunta</class>
+ <widget class="QMainWindow" name="ReferenciaJunta">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>723</width>
+    <height>583</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>10</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Entrada</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>320</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Junta Base</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>50</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>300</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>120</y>
+      <width>320</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Junta 2</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>50</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>300</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>200</y>
+      <width>320</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Junta 3</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_3">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>50</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>300</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>280</y>
+      <width>320</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Junta 4</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_4">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>50</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>300</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>360</y>
+      <width>320</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Junta 5</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_5">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>50</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>300</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_6">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>440</y>
+      <width>320</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Junta 6</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_6">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>50</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>300</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>10</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Saida</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_7">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>40</y>
+      <width>320</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Junta Base</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_8">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>50</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>300</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_8">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>120</y>
+      <width>320</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Junta Base</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_9">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>50</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>300</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_9">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>200</y>
+      <width>320</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Junta Base</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_10">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>50</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>300</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_10">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>280</y>
+      <width>320</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Junta Base</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_11">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>50</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_11">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>300</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_11">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>360</y>
+      <width>320</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Junta Base</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_12">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>50</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_12">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>300</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_12">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>440</y>
+      <width>320</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Junta Base</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_13">
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>50</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>300</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>723</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOpcoes">
+    <property name="title">
+     <string>Opções</string>
+    </property>
+    <addaction name="actionConectar"/>
+    <addaction name="separator"/>
+    <addaction name="actionSair"/>
+   </widget>
+   <addaction name="menuOpcoes"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionConectar">
+   <property name="text">
+    <string>Conectar</string>
+   </property>
+  </action>
+  <action name="actionSair">
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
