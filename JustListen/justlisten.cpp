@@ -4,6 +4,8 @@
 #include <timercpp.h>
 
 #include <iostream>
+#include <chrono>
+#include <thread>
 #include <sys/types.h>
 #include <unistd.h>
 #include <sys/socket.h>
@@ -12,13 +14,13 @@
 #include <string.h>
 #include <string>
 
-using namespace std;
+#include <QElapsedTimer>
 
-int joinValue;
+using namespace std;
 
 Timer t = Timer();
 int sock;
-int speed=500;
+long long speed = 500000000;
 char buf[4096];
 
 JustListen::JustListen(QWidget *parent):QMainWindow(parent),ui(new Ui::JustListen)
@@ -32,10 +34,27 @@ JustListen::~JustListen()
     delete ui;
 }
 
+bool clear = false;
+void setInterval(auto function, long long interval) {
+    clear = false;
+    std::thread t([=]() {
+        while(true) {
+            if(clear) return;
+            QElapsedTimer timer;
+            timer.start();
+            function();
+            long long sleep = interval - timer.nsecsElapsed();
+            sleep = sleep < 0 ? 0 : sleep;
+            std::cout << sleep << std::endl;
+            std::this_thread::sleep_for(std::chrono::nanoseconds(sleep));
+        }
+    });
+    t.detach();
+}
 
-bool JustListen::ativaRecebimentoDePacotes(int taxaDeAmostragem)
+bool JustListen::ativaRecebimentoDePacotes(long long taxaDeAmostragem)
 {
-    t.setInterval([&]()
+    setInterval([&]()
     {
         try
         {
@@ -60,36 +79,38 @@ bool JustListen::ativaRecebimentoDePacotes(int taxaDeAmostragem)
                 for(int k=0;k<bytesReceived;k++)
                     resposta[k]=buf[k];
             }
+            //cout << buf << endl;
 
             //Desconcaternar Pacotes e Exibir
             std::string::size_type sz;
 
-            joinValue = std::stoi(strtok (resposta," "),&sz);
-            ui->SJ1->setValue(joinValue);
-            ui->TJ1->setValue(joinValue/100);
+            double joinValue = std::stoi(strtok (resposta," "),&sz);
+            emit j1(joinValue/1000);
+            emit j1_int(joinValue);
 
             joinValue = std::stoi(strtok (NULL," "),&sz);
-            ui->SJ2->setValue(joinValue);
-            ui->TJ2->setValue(joinValue/100);
+            emit j2(joinValue/1000);
+            emit j2_int(joinValue);
 
             joinValue = std::stoi(strtok (NULL," "),&sz);
-            ui->SJ3->setValue(joinValue);
-            ui->TJ3->setValue(joinValue/100);
+            emit j3(joinValue/1000);
+            emit j3_int(joinValue);
 
             joinValue = std::stoi(strtok (NULL," "),&sz);
-            ui->SJ4->setValue(joinValue);
-            ui->TJ4->setValue(joinValue/100);
+            emit j4(joinValue/1000);
+            emit j4_int(joinValue);
 
             joinValue = std::stoi(strtok (NULL," "),&sz);
-            ui->SJ5->setValue(joinValue);
-            ui->TJ5->setValue(joinValue/100);
+            emit j5(joinValue/1000);
+            emit j5_int(joinValue);
 
             joinValue = std::stoi(strtok (NULL," "),&sz);
-            ui->SJ6->setValue(joinValue);
-            ui->TJ6->setValue(joinValue/100);
+            emit j6(joinValue/1000);
+            emit j6_int(joinValue);
         }
         catch(int error)
         {
+            cout << "error " << error << endl;
             return 0;
         }
     }, taxaDeAmostragem);
@@ -185,9 +206,18 @@ void JustListen::on_buttonDisconect_clicked()
     //	Close the socket
     try
     {
-        t.stop();
-        string userInput="\nCLOSE!\n";
-        send(sock, userInput.c_str(), userInput.size() + 1, 0);
+        clear = true;
+
+        char buf[4096];
+        string userInput="c"; // l = listen
+        try
+        {
+            send(sock, userInput.c_str(), userInput.size() + 1, 0);
+        }
+        catch (int e)
+        {
+            cout << "Could not send to server! Whoops!" << endl;
+        }
         ::close(sock);
 
         ui->boxStatus->setValue(0);
@@ -233,8 +263,8 @@ void JustListen::on_buttonConect_clicked()
     }
 }
 
-void JustListen::on_radioButton_1_clicked() {speed = 1;}
-void JustListen::on_radioButton_2_clicked() {speed = 2;}
-void JustListen::on_radioButton_3_clicked() {speed = 4;}
-void JustListen::on_radioButton_4_clicked() {speed = 8;}
-void JustListen::on_radioButton_5_clicked() {speed = 16;}
+void JustListen::on_radioButton_1_clicked() {speed = 400000;}
+void JustListen::on_radioButton_2_clicked() {speed = 2000000;}
+void JustListen::on_radioButton_3_clicked() {speed = 4000000;}
+void JustListen::on_radioButton_4_clicked() {speed = 8000000;}
+void JustListen::on_radioButton_5_clicked() {speed = 16000000;}

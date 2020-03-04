@@ -179,6 +179,9 @@ OpenServer</string>
       <property name="text">
        <string>400 us</string>
       </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
       <property name="checked">
        <bool>false</bool>
       </property>
@@ -268,10 +271,10 @@ OpenServer</string>
       </rect>
      </property>
      <property name="minimum">
-      <number>-17000</number>
+      <number>-170</number>
      </property>
      <property name="maximum">
-      <number>17000</number>
+      <number>170</number>
      </property>
      <property name="singleStep">
       <number>1</number>
@@ -302,10 +305,10 @@ OpenServer</string>
       </rect>
      </property>
      <property name="minimum">
-      <number>-8500</number>
+      <number>-85000</number>
      </property>
      <property name="maximum">
-      <number>15500</number>
+      <number>155000</number>
      </property>
      <property name="value">
       <number>0</number>
@@ -330,7 +333,7 @@ OpenServer</string>
       </rect>
      </property>
      <property name="minimum">
-      <number>-17000</number>
+      <number>-170000</number>
      </property>
      <property name="maximum">
       <number>0</number>
@@ -358,10 +361,10 @@ OpenServer</string>
       </rect>
      </property>
      <property name="minimum">
-      <number>-21000</number>
+      <number>-210000</number>
      </property>
      <property name="maximum">
-      <number>21000</number>
+      <number>210000</number>
      </property>
      <property name="sliderPosition">
       <number>0</number>
@@ -383,10 +386,10 @@ OpenServer</string>
       </rect>
      </property>
      <property name="minimum">
-      <number>-270000</number>
+      <number>-2700000</number>
      </property>
      <property name="maximum">
-      <number>270000</number>
+      <number>2700000</number>
      </property>
      <property name="sliderPosition">
       <number>0</number>
@@ -408,10 +411,10 @@ OpenServer</string>
       </rect>
      </property>
      <property name="minimum">
-      <number>-13000</number>
+      <number>-130000</number>
      </property>
      <property name="maximum">
-      <number>13000</number>
+      <number>130000</number>
      </property>
      <property name="sliderPosition">
       <number>0</number>
@@ -514,7 +517,7 @@ OpenServer</string>
       <bool>false</bool>
      </property>
      <property name="decimals">
-      <number>2</number>
+      <number>3</number>
      </property>
      <property name="minimum">
       <double>-170.000000000000000</double>
@@ -535,6 +538,9 @@ OpenServer</string>
        <height>26</height>
       </rect>
      </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
      <property name="minimum">
       <double>-85.000000000000000</double>
      </property>
@@ -553,6 +559,9 @@ OpenServer</string>
        <width>101</width>
        <height>26</height>
       </rect>
+     </property>
+     <property name="decimals">
+      <number>3</number>
      </property>
      <property name="minimum">
       <double>-170.000000000000000</double>
@@ -573,6 +582,9 @@ OpenServer</string>
        <height>26</height>
       </rect>
      </property>
+     <property name="decimals">
+      <number>3</number>
+     </property>
      <property name="minimum">
       <double>-210.000000000000000</double>
      </property>
@@ -588,6 +600,9 @@ OpenServer</string>
        <width>101</width>
        <height>26</height>
       </rect>
+     </property>
+     <property name="decimals">
+      <number>3</number>
      </property>
      <property name="minimum">
       <double>-130.000000000000000</double>
@@ -607,6 +622,9 @@ OpenServer</string>
        <width>101</width>
        <height>26</height>
       </rect>
+     </property>
+     <property name="decimals">
+      <number>3</number>
      </property>
      <property name="minimum">
       <double>-270.000000000000000</double>
@@ -695,5 +713,212 @@ OpenServer</string>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>JustListen</sender>
+   <signal>j1(double)</signal>
+   <receiver>TJ1</receiver>
+   <slot>setValue(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>42</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JustListen</sender>
+   <signal>j2(double)</signal>
+   <receiver>TJ2</receiver>
+   <slot>setValue(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JustListen</sender>
+   <signal>j3(double)</signal>
+   <receiver>TJ3</receiver>
+   <slot>setValue(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JustListen</sender>
+   <signal>j4(double)</signal>
+   <receiver>TJ4</receiver>
+   <slot>setValue(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JustListen</sender>
+   <signal>j5(double)</signal>
+   <receiver>TJ5</receiver>
+   <slot>setValue(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JustListen</sender>
+   <signal>j6(double)</signal>
+   <receiver>TJ6</receiver>
+   <slot>setValue(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>332</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JustListen</sender>
+   <signal>j1_int(int)</signal>
+   <receiver>SJ1</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>67</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JustListen</sender>
+   <signal>j6_int(int)</signal>
+   <receiver>SJ6</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>357</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JustListen</sender>
+   <signal>j5_int(int)</signal>
+   <receiver>SJ5</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JustListen</sender>
+   <signal>j4_int(int)</signal>
+   <receiver>SJ4</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JustListen</sender>
+   <signal>j3_int(int)</signal>
+   <receiver>SJ3</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>JustListen</sender>
+   <signal>j2_int(int)</signal>
+   <receiver>SJ2</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>117</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>j1(double)</signal>
+  <signal>j2(double)</signal>
+  <signal>j3(double)</signal>
+  <signal>j4(double)</signal>
+  <signal>j5(double)</signal>
+  <signal>j6(double)</signal>
+  <signal>j1_int(int)</signal>
+  <signal>j2_int(int)</signal>
+  <signal>j3_int(int)</signal>
+  <signal>j4_int(int)</signal>
+  <signal>j5_int(int)</signal>
+  <signal>j6_int(int)</signal>
+ </slots>
 </ui>
