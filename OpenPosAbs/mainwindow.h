@@ -53,6 +53,10 @@ private slots:
 
     void on_RA5S_sliderMoved(int position);
 
+    void on_enableSet_clicked();
+
+    void on_disableSet_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

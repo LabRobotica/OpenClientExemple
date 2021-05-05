@@ -220,6 +220,7 @@ bool MainWindow::ativaEnvioRecebimentoDePacotes(int taxaDeAmostragem)
             cout << bytesReceived << endl;
             for(int k=0;k<bytesReceived;k++)
              resposta[k]=buf[k];
+            cout << resposta << endl;
             std::string::size_type sz;
             char *pedaco;//string pedaco;
             //cout << stoi(strtok (resposta," "),&sz) << endl;
@@ -267,6 +268,8 @@ bool MainWindow::ativaEnvioRecebimentoDePacotes(int taxaDeAmostragem)
 
 void MainWindow::on_buttonConect_clicked()
 {
+    ui->enableSet->setEnabled(1);
+    ui->disableSet->setEnabled(0);
     ui->progressStatus->setValue(0);
     ui->buttonConect->setEnabled(0);
     ui->buttonDisconect->setEnabled(1);
@@ -306,8 +309,11 @@ void MainWindow::on_buttonDisconect_clicked()
 
 void MainWindow::on_enable_clicked()
 {
+    ui->enableSet->setEnabled(1);
+    ui->disableSet->setEnabled(0);
     ui->enable->setEnabled(0);
     ui->disable->setEnabled(1);
+    ui->eORL->setEnabled(1);
     MainWindow::resgataSinalInicial();
 
     if (MainWindow::ativaEnvioRecebimentoDePacotes(ui->baute->value()))
@@ -324,6 +330,7 @@ void MainWindow::on_disable_clicked()
     ui->disable->setEnabled(0);
     ui->reference->setEnabled(0);
     ui->out->setEnabled(0);
+    ui->eORL->setEnabled(0);
 }
 
 
@@ -389,3 +396,18 @@ void MainWindow::on_RA6S_sliderMoved(int position)
     ui->RA6B->setValue(((double)position)/val);
 }
 
+void MainWindow::on_enableSet_clicked()
+{
+    ui->enableSet->setEnabled(0);
+    ui->disableSet->setEnabled(1);
+    string userInput="W";
+    send(sock, userInput.c_str(), userInput.size() + 1, 0);
+}
+
+void MainWindow::on_disableSet_clicked()
+{
+    ui->enableSet->setEnabled(1);
+    ui->disableSet->setEnabled(0);
+    string userInput="w";
+    send(sock, userInput.c_str(), userInput.size() + 1, 0);
+}

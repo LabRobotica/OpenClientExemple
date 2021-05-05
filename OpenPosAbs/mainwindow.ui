@@ -1167,6 +1167,53 @@ OpenServer</string>
      </property>
     </widget>
    </widget>
+   <widget class="QGroupBox" name="eORL">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>231</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>eORL</string>
+    </property>
+    <widget class="QPushButton" name="enableSet">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Enable
+set_target</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="disableSet">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>30</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Disable
+set_target</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
  </widget>
  <resources/>
